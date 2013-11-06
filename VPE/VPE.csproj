@@ -64,6 +64,9 @@
     <Compile Include="Source\Engine\Graphics\Input\Keyboard.cs" />
     <Compile Include="Source\Engine\Graphics\Input\Mouse.cs" />
     <Compile Include="Source\Engine\Graphics\Input\MouseButton.cs" />
+    <Compile Include="Source\_Common\Color\DefaultColors.cs" />
+    <Compile Include="Source\_Common\Color\HSV.cs" />
+    <Compile Include="Source\_Common\Color\Mix.cs" />
     <Compile Include="Source\_Common\Color\_DefColor.cs" />
     <Compile Include="Source\_Common\Vec\Vec2\Algebra.cs" />
     <Compile Include="Source\_Common\Vec\Vec2\Extra.cs" />

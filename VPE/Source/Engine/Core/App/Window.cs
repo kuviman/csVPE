@@ -15,12 +15,22 @@ namespace VitPro.Engine {
 			Title = "VPE application";
 		}
 
+		/// <summary>
+		/// Gets or sets window title.
+		/// </summary>
 		public static string Title {
 			get { return Window.Title; }
 			set { Window.Title = value; }
 		}
 
+		/// <summary>
+		/// Gets window width.
+		/// </summary>
 		public static int Width { get { return Window.Width; } }
+
+		/// <summary>
+		/// Gets window height.
+		/// </summary>
 		public static int Height { get { return Window.Height; } }
 
 	}

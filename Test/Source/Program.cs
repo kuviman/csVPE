@@ -6,9 +6,12 @@ using VitPro.Engine;
 class Test : State {
 
 	Color backColor = new Color(0.8, 0.8, 1);
+	double t = 0;
 
 	public override void Update(double dt) {
 		base.Update(dt);
+		t += dt;
+		backColor = new Color(Math.Sin(t) / 2 + 0.5, 0.5, 1);
 	}
 	public override void Render() {
 		Draw.Clear(backColor);
