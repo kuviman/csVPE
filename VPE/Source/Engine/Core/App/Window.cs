@@ -20,6 +20,9 @@ namespace VitPro.Engine {
 			set { Window.Title = value; }
 		}
 
+		public static int Width { get { return Window.Width; } }
+		public static int Height { get { return Window.Height; } }
+
 	}
 
 }
