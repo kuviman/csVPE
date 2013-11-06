@@ -59,10 +59,10 @@
     <Compile Include="Source\Engine\Core\App\_DefApp.cs" />
     <Compile Include="Source\Engine\Core\State\_DefState.cs" />
     <Compile Include="Source\Engine\Core\State\_IState.cs" />
+    <Compile Include="Source\Engine\Graphics\Draw\_DefDraw.cs" />
+    <Compile Include="Source\_Common\Color\_DefColor.cs" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Source\_Common\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
