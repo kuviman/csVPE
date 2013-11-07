@@ -15,7 +15,7 @@ namespace VitPro.Engine {
 		/// <summary>
 		/// Gets whether application is done.
 		/// </summary>
-		public static bool Closed { get { return _closed; } }
+		public static bool Closed { get { return _closed; } set { _closed = value; } }
 
 		static Stack<IState> stateStack = new Stack<IState>();
 
@@ -45,6 +45,7 @@ namespace VitPro.Engine {
 		/// </summary>
 		public static void Kill() {
 			stateStack.Clear();
+			Closed = true;
 		}
 
 		static void UpdateStates() {
@@ -65,7 +66,7 @@ namespace VitPro.Engine {
 				PushState(startState);
 				Window.Run();
 			} finally {
-				_closed = true;
+				Closed = true;
 			}
 		}
 

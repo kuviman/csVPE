@@ -4,7 +4,26 @@ namespace VitPro.Engine {
 
 	partial class App {
 
+		/// <summary>
+		/// Gets or sets close event handler.
+		/// </summary>
+		public static Action OnClose { get; set; }
+
+		static bool _autoQuit = true;
+
+		/// <summary>
+		/// Gets or sets whether application closes automatically when user closes the window.
+		/// </summary>
+		public static bool AutoQuit { get { return _autoQuit; } set { _autoQuit = value; } }
+
 		static void InitEvents() {
+			Window.Closing += (o, args) => {
+				if (!Closed && OnClose != null)
+					OnClose();
+				args.Cancel = !Closed && !AutoQuit;
+				if (!args.Cancel)
+					Closed = true;
+			};
 			Window.UpdateFrame += (o, args) => Update(args.Time);
 			Window.RenderFrame += (o, args) => Render();
 			Window.Keyboard.KeyDown += (o, args) => KeyDown((Key)args.Key);
@@ -18,8 +37,10 @@ namespace VitPro.Engine {
 
 		static void Update(double dt) {
 			UpdateStates();
-			if (CurrentState == null)
+			if (CurrentState == null || Closed) {
+				Closed = true;
 				Window.Close();
+			}
 			if (CurrentState != null)
 				CurrentState.Update(dt);
 		}
@@ -31,6 +52,8 @@ namespace VitPro.Engine {
 		}
 
 		static void KeyDown(Key key) {
+			if (key == Key.F4 && (Key.LAlt.Pressed() || Key.RAlt.Pressed()))
+				Window.Close();
 			if (CurrentState != null)
 				CurrentState.KeyDown(key);
 		}

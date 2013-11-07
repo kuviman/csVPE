@@ -29,7 +29,13 @@ class Test : State {
 }
 
 class Program {
+	static void OnClose() {
+		Console.WriteLine("Closing window");
+	}
+
 	static void Main(string[] args) {
+		App.OnClose = OnClose;
+		App.AutoQuit = false;
 		App.Run(new Test());
 	}
 }
