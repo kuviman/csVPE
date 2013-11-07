@@ -57,6 +57,12 @@
     <Compile Include="Source\Engine\Core\App\States.cs" />
     <Compile Include="Source\Engine\Core\App\Window.cs" />
     <Compile Include="Source\Engine\Core\App\_DefApp.cs" />
+    <Compile Include="Source\Engine\Core\EngineError.cs" />
+    <Compile Include="Source\Engine\Core\RawGL\List.cs" />
+    <Compile Include="Source\Engine\Core\RawGL\Program.cs" />
+    <Compile Include="Source\Engine\Core\RawGL\Shader.cs" />
+    <Compile Include="Source\Engine\Core\RawGL\Texture.cs" />
+    <Compile Include="Source\Engine\Core\RawGL\_DefRawGL.cs" />
     <Compile Include="Source\Engine\Core\State\_DefState.cs" />
     <Compile Include="Source\Engine\Core\State\_IState.cs" />
     <Compile Include="Source\Engine\Graphics\Draw\_DefDraw.cs" />
@@ -68,6 +74,7 @@
     <Compile Include="Source\_Common\Color\HSV.cs" />
     <Compile Include="Source\_Common\Color\Mix.cs" />
     <Compile Include="Source\_Common\Color\_DefColor.cs" />
+    <Compile Include="Source\_Common\Vec\Vec2i\_DefVec2i.cs" />
     <Compile Include="Source\_Common\Vec\Vec2\Algebra.cs" />
     <Compile Include="Source\_Common\Vec\Vec2\Extra.cs" />
     <Compile Include="Source\_Common\Vec\Vec2\_DefVec2.cs" />
