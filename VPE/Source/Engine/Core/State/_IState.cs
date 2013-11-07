@@ -2,7 +2,7 @@
 
 namespace VitPro.Engine {
 
-	public interface IState {
+	public interface IState : IRenderable, IUpdateable {
 
 		/// <summary>
 		/// Gets whether state has been closed.
@@ -13,17 +13,6 @@ namespace VitPro.Engine {
 		/// Close the state.
 		/// </summary>
 		void Close();
-
-		/// <summary>
-		/// Update the state.
-		/// </summary>
-		/// <param name="dt">Time since last update.</param>
-		void Update(double dt);
-
-		/// <summary>
-		/// Render the state.
-		/// </summary>
-		void Render();
 
 		/// <summary>
 		/// Called when a key is being pressed.
