@@ -5,13 +5,15 @@ using VitPro.Engine;
 
 class Test : State {
 
-	Color backColor = new Color(0.8, 0.8, 1);
+	static Random rnd = new Random();
+
+	Color backColor = new Color(0, rnd.NextDouble(), 1);
 	double t = 0;
 
 	public override void Update(double dt) {
 		base.Update(dt);
 		t += dt;
-		backColor = new Color(Math.Sin(t) / 2 + 0.5, 0.5, 1);
+		backColor = new Color(Math.Sin(t) / 2 + 0.5, backColor.G, 1);
 	}
 	public override void Render() {
 		Draw.Clear(backColor);
@@ -19,27 +21,10 @@ class Test : State {
 
 	public override void KeyDown(Key key) {
 		base.KeyDown(key);
-		Console.WriteLine("keydown {0}", key);
-	}
-
-	public override void KeyUp(Key key) {
-		base.KeyUp(key);
-		Console.WriteLine("keyup {0}", key);
-	}
-
-	public override void MouseDown(MouseButton button, Vec2 pos) {
-		base.MouseDown(button, pos);
-		Console.WriteLine("mousedown {0} {1}", button, pos);
-	}
-
-	public override void MouseUp(MouseButton button, Vec2 pos) {
-		base.MouseUp(button, pos);
-		Console.WriteLine("mouseup {0} {1}", button, pos);
-	}
-
-	public override void MouseMove(Vec2 pos) {
-		base.MouseMove(pos);
-		Console.WriteLine("mousemove {0}", pos);
+		if (key == Key.Escape)
+			Close();
+		if (key == Key.Space)
+			App.PushState(new Test());
 	}
 }
 

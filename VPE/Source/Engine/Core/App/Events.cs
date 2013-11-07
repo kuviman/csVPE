@@ -17,6 +17,9 @@ namespace VitPro.Engine {
 		}
 
 		static void Update(double dt) {
+			UpdateStates();
+			if (CurrentState == null)
+				Window.Close();
 			if (CurrentState != null)
 				CurrentState.Update(dt);
 		}
