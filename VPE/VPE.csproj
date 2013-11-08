@@ -81,6 +81,7 @@
     <Compile Include="Source\_Common\Vec\Vec2\Algebra.cs" />
     <Compile Include="Source\_Common\Vec\Vec2\Extra.cs" />
     <Compile Include="Source\_Common\Vec\Vec2\_DefVec2.cs" />
+    <Compile Include="Source\_Common\_ExtAction.cs" />
   </ItemGroup>
   <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
