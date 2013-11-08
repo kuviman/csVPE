@@ -65,6 +65,7 @@
     <Compile Include="Source\Engine\Core\EngineError.cs" />
     <Compile Include="Source\Engine\Graphics\Draw\Primitives.cs" />
     <Compile Include="Source\Engine\Graphics\Draw\RenderState.cs" />
+    <Compile Include="Source\Engine\Graphics\Draw\Transform.cs" />
     <Compile Include="Source\Engine\Graphics\Shader\Vec2.cs" />
     <Compile Include="Source\Engine\Graphics\Shader\Vec4.cs" />
     <Compile Include="Source\Engine\Graphics\Shader\_DefShader.cs" />

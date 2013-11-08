@@ -7,12 +7,10 @@ namespace VitPro.Engine {
 
     partial class Draw {
 
-        internal struct RenderState {
-			public Matrix4 Matrix;
-			public Matrix4 projMatrix;
-			public Color color;
-
-			public static RenderState Default;
+        internal class RenderState {
+			public Matrix4 Matrix = Matrix4.Identity;
+			public Matrix4 projMatrix = Matrix4.Identity;
+			public Color color = new Color(1, 1, 1, 1);
 
             public RenderState Clone() {
                 return (RenderState)MemberwiseClone();
@@ -20,14 +18,19 @@ namespace VitPro.Engine {
         }
 
 		static void InitState() {
-			RenderState.Default.Matrix = Matrix4.Identity;
-			RenderState.Default.projMatrix = Matrix4.Identity;
-			RenderState.Default.color = new Color(1, 1, 1, 1);
-			StateStack.Push(RenderState.Default);
+			StateStack.Push(new RenderState());
 		}
 
 		internal static Stack<RenderState> StateStack = new Stack<RenderState>();
 		internal static RenderState CurrentState { get { return StateStack.Peek(); } }
+
+		public static void Save() {
+			StateStack.Push(CurrentState.Clone());
+		}
+
+		public static void Load() {
+			StateStack.Pop();
+		}
 
     }
 
