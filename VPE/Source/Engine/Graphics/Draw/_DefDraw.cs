@@ -5,6 +5,13 @@ namespace VitPro.Engine {
 
 	public static partial class Draw {
 
+		static Draw() {
+			App.Init();
+			GL.Enable(EnableCap.Blend);
+			GL.BlendFunc(BlendingFactorSrc.SrcAlpha, BlendingFactorDest.OneMinusSrcAlpha);
+			InitState();
+		}
+
 		public static void Clear(Color color) {
 			Clear(color.R, color.G, color.B, color.A);
 		}

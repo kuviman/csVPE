@@ -35,9 +35,9 @@ namespace VitPro.Engine {
         /// Renders a quad using the shader.
         /// </summary>
 		public virtual void Render() {
-			Color color = Color.White;
-			Matrix4 modelMatrix = Matrix4.Identity;
-			Matrix4 projMatrix = Matrix4.Identity;
+			Color color = Draw.CurrentState.color;
+			Matrix4 modelMatrix = Draw.CurrentState.Matrix;
+			Matrix4 projMatrix = Draw.CurrentState.projMatrix;
 
 			GL.UseProgram(program);
 
