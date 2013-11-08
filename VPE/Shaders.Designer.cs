@@ -93,7 +93,7 @@ namespace VitPro.Engine {
         ///varying vec2 modelPos;
         ///
         ///void main() {
-        ///	if (len(modelPos - vec2(0.5, 0.5)) &gt; 0.5)
+        ///	if (distance(modelPos, vec2(0.5, 0.5)) &gt; 0.5)
         ///		discard;
         ///    gl_FragColor = color;
         ///}
@@ -118,6 +118,27 @@ namespace VitPro.Engine {
         internal static string Color {
             get {
                 return ResourceManager.GetString("Color", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to #version 150
+        ///
+        ///uniform vec4 color;
+        ///uniform sampler2D texture;
+        ///
+        ///uniform vec2 origin, size;
+        ///
+        ///varying vec2 quadPos;
+        ///
+        ///void main() {
+        ///    gl_FragColor = texture2D(texture, origin + quadPos * size) * color;
+        ///}
+        ///.
+        /// </summary>
+        internal static string Texture {
+            get {
+                return ResourceManager.GetString("Texture", resourceCulture);
             }
         }
     }

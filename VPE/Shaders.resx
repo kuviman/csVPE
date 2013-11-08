@@ -124,6 +124,9 @@
   <data name="Color" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>Resources\Color.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;koi8-r</value>
   </data>
+  <data name="Texture" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\Texture.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;windows-1251</value>
+  </data>
   <data name="_Vertex" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>Resources\_Vertex.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;windows-1251</value>
   </data>

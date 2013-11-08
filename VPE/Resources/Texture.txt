@@ -1,0 +1,12 @@
+#version 150
+
+uniform vec4 color;
+uniform sampler2D texture;
+
+uniform vec2 origin, size;
+
+varying vec2 quadPos;
+
+void main() {
+    gl_FragColor = texture2D(texture, origin + quadPos * size) * color;
+}
