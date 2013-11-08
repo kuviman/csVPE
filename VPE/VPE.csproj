@@ -77,6 +77,8 @@
     <Compile Include="Source\_Common\Color\HSV.cs" />
     <Compile Include="Source\_Common\Color\Mix.cs" />
     <Compile Include="Source\_Common\Color\_DefColor.cs" />
+    <Compile Include="Source\_Common\GRandom\_DefGRandom.cs" />
+    <Compile Include="Source\_Common\GRandom\_ExtRandom.cs" />
     <Compile Include="Source\_Common\Vec\Vec2i\_DefVec2i.cs" />
     <Compile Include="Source\_Common\Vec\Vec2\Algebra.cs" />
     <Compile Include="Source\_Common\Vec\Vec2\Extra.cs" />
