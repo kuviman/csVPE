@@ -58,8 +58,10 @@ class Test : State {
 
 		Draw.Save();
 		Draw.Color(0, 0, 0);
-		Draw.Scale(0.4);
-		font.Render("TEXT");
+		Draw.Scale(0.3);
+		Draw.Scale(font.Measure("TEXT"), 1);
+		var t = font.MakeTexture("TEXT");
+		t.SubTexture(0, 0, 2.4, 1).Render();
 		Draw.Load();
 	}
 

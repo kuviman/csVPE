@@ -9,7 +9,7 @@ namespace VitPro.Engine {
     /// Represents a texture image.
     /// </summary>
     [Serializable]
-    public partial class Texture : IRenderable {
+    public partial class Texture : ITexture {
 
         [Serializable]
         struct ColorStruct {
