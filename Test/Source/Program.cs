@@ -5,17 +5,11 @@ using VitPro.Engine;
 
 class Test : State {
 
-	double t = 0;
-
-	public override void Update(double dt) {
-		base.Update(dt);
-		t += dt;
-	}
 	public override void Render() {
 		Draw.Clear(Color.Black);
 		Draw.Save();
 		Draw.Color(Color.Green);
-		Draw.Rotate(t);
+		Draw.Rotate(App.Time);
 		Draw.Align(0.5, 0.5);
 		Draw.Quad();
 		Draw.Load();

@@ -5,6 +5,11 @@ namespace VitPro.Engine {
 	partial class App {
 
 		/// <summary>
+		/// Gets time elapsed since program begun.
+		/// </summary>
+		public static double Time { get; private set; }
+
+		/// <summary>
 		/// Gets or sets close event handler.
 		/// </summary>
 		public static Action OnClose { get; set; }
@@ -17,6 +22,7 @@ namespace VitPro.Engine {
 		public static bool AutoQuit { get { return _autoQuit; } set { _autoQuit = value; } }
 
 		static void InitEvents() {
+			Time = 0;
 			Window.Closing += (o, args) => {
 				if (!Closed && OnClose != null)
 					OnClose();
@@ -36,6 +42,7 @@ namespace VitPro.Engine {
 		}
 
 		static void Update(double dt) {
+			Time += dt;
 			UpdateStates();
 			if (CurrentState == null || Closed) {
 				Closed = true;
