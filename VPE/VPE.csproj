@@ -63,6 +63,7 @@
     <Compile Include="Source\Engine\Core\App\Window.cs" />
     <Compile Include="Source\Engine\Core\App\_DefApp.cs" />
     <Compile Include="Source\Engine\Core\EngineError.cs" />
+    <Compile Include="Source\Engine\Graphics\Camera\_DefCamera.cs" />
     <Compile Include="Source\Engine\Graphics\Draw\Primitives.cs" />
     <Compile Include="Source\Engine\Graphics\Draw\RenderState.cs" />
     <Compile Include="Source\Engine\Graphics\Draw\Transform.cs" />

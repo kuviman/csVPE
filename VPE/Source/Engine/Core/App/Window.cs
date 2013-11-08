@@ -33,6 +33,11 @@ namespace VitPro.Engine {
 		/// </summary>
 		public static int Height { get { return Window.Height; } }
 
+		/// <summary>
+		/// Gets the window aspect ratio.
+		/// </summary>
+		public static double Aspect { get { return (double)Width / (double)Height; } }
+
 	}
 
 }
