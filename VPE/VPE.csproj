@@ -72,6 +72,7 @@
     <Compile Include="Source\Engine\Graphics\Shader\Vec4.cs" />
     <Compile Include="Source\Engine\Graphics\Shader\_DefShader.cs" />
     <Compile Include="Source\Engine\Graphics\Shader\Uniforms.cs" />
+    <Compile Include="Source\Engine\Graphics\Texture\Pixels.cs" />
     <Compile Include="Source\Engine\Graphics\Texture\_DefTexture.cs" />
     <Compile Include="Source\Engine\RawGL\List.cs" />
     <Compile Include="Source\Engine\RawGL\Program.cs" />

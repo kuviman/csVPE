@@ -5,8 +5,8 @@ uniform sampler2D texture;
 
 uniform vec2 origin, size;
 
-varying vec2 quadPos;
+varying vec2 modelPos;
 
 void main() {
-    gl_FragColor = texture2D(texture, origin + quadPos * size) * color;
+    gl_FragColor = texture2D(texture, origin + modelPos * size) * color;
 }
