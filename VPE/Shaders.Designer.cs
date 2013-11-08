@@ -68,13 +68,13 @@ namespace VitPro.Engine {
         ///uniform vec4 color;
         ///uniform mat4x4 modelMatrix, projectionMatrix;
         ///
-        ///varying vec2 quadPos, worldPos, screenPos;
+        ///varying vec2 modelPos, worldPos, screenPos;
         ///
         ///void main() {
         ///	vec4 wp = modelMatrix * position;
         ///    gl_Position = projectionMatrix * wp;
         ///
-        ///	quadPos = vec2(position.x, position.y);
+        ///	modelPos = vec2(position.x, position.y);
         ///	worldPos = vec2(wp.x, wp.y);
         ///	screenPos = vec2(gl_Position.x, gl_Position.y);
         ///}.
@@ -92,7 +92,8 @@ namespace VitPro.Engine {
         ///
         ///void main() {
         ///    gl_FragColor = color;
-        ///}.
+        ///}
+        ///.
         /// </summary>
         internal static string Color {
             get {

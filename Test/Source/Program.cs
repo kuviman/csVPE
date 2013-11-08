@@ -7,12 +7,8 @@ class Test : State {
 
 	public override void Render() {
 		Draw.Clear(Color.Black);
-		Draw.Save();
-		Draw.Color(Color.Green);
-		Draw.Rotate(App.Time);
-		Draw.Align(0.5, 0.5);
-		Draw.Quad();
-		Draw.Load();
+		Draw.Dot(Vec2.Zero, 0.1, Color.Red);
+		Draw.Dot(0.5, 0.5, 0.2);
 	}
 
 	public override void KeyDown(Key key) {
