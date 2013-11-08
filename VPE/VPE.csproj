@@ -68,6 +68,9 @@
     <Compile Include="Source\Engine\Graphics\Draw\RenderState.cs" />
     <Compile Include="Source\Engine\Graphics\Draw\RenderTarget.cs" />
     <Compile Include="Source\Engine\Graphics\Draw\Transform.cs" />
+    <Compile Include="Source\Engine\Graphics\Font\FontStyle.cs" />
+    <Compile Include="Source\Engine\Graphics\Font\SystemFont.cs" />
+    <Compile Include="Source\Engine\Graphics\Font\_IFont.cs" />
     <Compile Include="Source\Engine\Graphics\Shader\Int.cs" />
     <Compile Include="Source\Engine\Graphics\Shader\Real.cs" />
     <Compile Include="Source\Engine\Graphics\Shader\Texture.cs" />

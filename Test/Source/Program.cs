@@ -10,12 +10,15 @@ class Test : State {
 	Texture tex2 = new Texture("../Data/Textures/Temp.png");
 	Texture tmp = new Texture(120, 90);
 
+	SystemFont font = new SystemFont("Times New Roman", 72, FontStyle.Bold | FontStyle.Strikeout);
+
 	public Test() {
 		for (int x = 0; x < tex.Width; x++) {
 			for (int y = 0; y < tex.Height; y++) {
 				tex[x, y] = Color.FromHSV(GRandom.NextDouble(), 1, 1);
 			}
 		}
+		font.Smooth = false;
 	}
 
 	public override void Render() {
@@ -51,6 +54,12 @@ class Test : State {
 		Draw.Translate(-1, -1);
 		Draw.Scale(2);
 		tmp.Render();
+		Draw.Load();
+
+		Draw.Save();
+		Draw.Color(0, 0, 0);
+		Draw.Scale(0.4);
+		font.Render("TEXT");
 		Draw.Load();
 	}
 
