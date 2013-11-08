@@ -64,6 +64,7 @@
     <Compile Include="Source\Engine\Core\App\_DefApp.cs" />
     <Compile Include="Source\Engine\Core\EngineError.cs" />
     <Compile Include="Source\Engine\Graphics\Draw\Primitives.cs" />
+    <Compile Include="Source\Engine\Graphics\Shader\Vec2.cs" />
     <Compile Include="Source\Engine\Graphics\Shader\Vec4.cs" />
     <Compile Include="Source\Engine\Graphics\Shader\_DefShader.cs" />
     <Compile Include="Source\Engine\Graphics\Shader\Uniforms.cs" />
