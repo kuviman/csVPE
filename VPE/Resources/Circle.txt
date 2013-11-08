@@ -1,0 +1,11 @@
+#version 150
+
+uniform vec4 color;
+
+varying vec2 modelPos;
+
+void main() {
+	if (distance(modelPos, vec2(0.5, 0.5)) > 0.5)
+		discard;
+    gl_FragColor = color;
+}

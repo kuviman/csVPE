@@ -7,8 +7,8 @@ class Test : State {
 
 	public override void Render() {
 		Draw.Clear(Color.Black);
-		Draw.Dot(Vec2.Zero, 0.1, Color.Red);
-		Draw.Dot(0.5, 0.5, 0.2);
+		Draw.Circle(Vec2.Zero, 0.1, Color.Red);
+		Draw.Circle(0.5, 0.5, 0.2);
 	}
 
 	public override void KeyDown(Key key) {

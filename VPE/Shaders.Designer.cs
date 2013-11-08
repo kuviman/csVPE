@@ -90,6 +90,26 @@ namespace VitPro.Engine {
         ///
         ///uniform vec4 color;
         ///
+        ///varying vec2 modelPos;
+        ///
+        ///void main() {
+        ///	if (len(modelPos - vec2(0.5, 0.5)) &gt; 0.5)
+        ///		discard;
+        ///    gl_FragColor = color;
+        ///}
+        ///.
+        /// </summary>
+        internal static string Circle {
+            get {
+                return ResourceManager.GetString("Circle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to #version 150
+        ///
+        ///uniform vec4 color;
+        ///
         ///void main() {
         ///    gl_FragColor = color;
         ///}
