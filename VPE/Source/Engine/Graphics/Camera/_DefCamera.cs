@@ -23,7 +23,7 @@ namespace VitPro.Engine {
 
         public void Apply() {
             float h = (float)(FOV / 2);
-            float w = (float)(h * App.Aspect);
+            float w = (float)(h * Draw.Aspect);
 
             var rot = OpenTK.Matrix4.CreateRotationZ((float)(-Rotation));
             var trans = OpenTK.Matrix4.CreateTranslation((float)-Position.X, (float)-Position.Y, 0);

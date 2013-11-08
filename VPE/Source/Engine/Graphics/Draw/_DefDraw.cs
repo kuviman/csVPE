@@ -9,7 +9,7 @@ namespace VitPro.Engine {
 			App.Init();
 			GL.Enable(EnableCap.Blend);
 			GL.BlendFunc(BlendingFactorSrc.SrcAlpha, BlendingFactorDest.OneMinusSrcAlpha);
-			InitState();
+			NewStack();
 		}
 
 		public static void Clear(Color color) {

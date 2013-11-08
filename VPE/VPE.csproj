@@ -66,6 +66,7 @@
     <Compile Include="Source\Engine\Graphics\Camera\_DefCamera.cs" />
     <Compile Include="Source\Engine\Graphics\Draw\Primitives.cs" />
     <Compile Include="Source\Engine\Graphics\Draw\RenderState.cs" />
+    <Compile Include="Source\Engine\Graphics\Draw\RenderTarget.cs" />
     <Compile Include="Source\Engine\Graphics\Draw\Transform.cs" />
     <Compile Include="Source\Engine\Graphics\Shader\Texture.cs" />
     <Compile Include="Source\Engine\Graphics\Shader\Vec2.cs" />

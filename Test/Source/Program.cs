@@ -8,6 +8,7 @@ class Test : State {
 	Camera cam = new Camera(2);
 	Texture tex = new Texture(16, 16);
 	Texture tex2 = new Texture("../Data/Textures/Temp.png");
+	Texture tmp = new Texture(120, 90);
 
 	public Test() {
 		for (int x = 0; x < tex.Width; x++) {
@@ -18,7 +19,8 @@ class Test : State {
 	}
 
 	public override void Render() {
-		Draw.Clear(Color.Black);
+		Draw.BeginTexture(tmp);
+		Draw.Clear(Color.Blue);
 
 		Draw.Save();
 		cam.Apply();
@@ -41,6 +43,14 @@ class Test : State {
 		tex2.Render();
 		Draw.Load();
 
+		Draw.Load();
+
+		Draw.EndTexture();
+
+		Draw.Save();
+		Draw.Translate(-1, -1);
+		Draw.Scale(2);
+		tmp.Render();
 		Draw.Load();
 	}
 

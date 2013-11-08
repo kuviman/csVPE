@@ -17,11 +17,12 @@ namespace VitPro.Engine {
             }
         }
 
-		static void InitState() {
+		static void NewStack() {
+			stackStack.Push(new Stack<RenderState>());
 			StateStack.Push(new RenderState());
 		}
 
-		internal static Stack<RenderState> StateStack = new Stack<RenderState>();
+		internal static Stack<RenderState> StateStack { get { return stackStack.Peek(); } }
 		internal static RenderState CurrentState { get { return StateStack.Peek(); } }
 
 		public static void Save() {
