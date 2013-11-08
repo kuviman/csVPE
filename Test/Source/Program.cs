@@ -17,6 +17,7 @@ class Test : State {
 	}
 	public override void Render() {
 		Draw.Clear(backColor);
+		Draw.Quad();
 	}
 
 	public override void KeyDown(Key key) {

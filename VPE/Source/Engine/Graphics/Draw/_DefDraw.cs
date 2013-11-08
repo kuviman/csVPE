@@ -14,6 +14,9 @@ namespace VitPro.Engine {
 			GL.Clear(ClearBufferMask.ColorBufferBit);
 		}
 
+		internal static void RawQuad() {
+			GL.Rect(0, 0, 1, 1);
+		}
 	}
 
 }

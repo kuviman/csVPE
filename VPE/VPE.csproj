@@ -53,11 +53,18 @@
     <Reference Include="System.Windows.Forms" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Shaders.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Shaders.resx</DependentUpon>
+    </Compile>
     <Compile Include="Source\Engine\Core\App\Events.cs" />
     <Compile Include="Source\Engine\Core\App\States.cs" />
     <Compile Include="Source\Engine\Core\App\Window.cs" />
     <Compile Include="Source\Engine\Core\App\_DefApp.cs" />
     <Compile Include="Source\Engine\Core\EngineError.cs" />
+    <Compile Include="Source\Engine\Graphics\Draw\Primitives.cs" />
+    <Compile Include="Source\Engine\Graphics\Shader\_DefShader.cs" />
     <Compile Include="Source\Engine\RawGL\List.cs" />
     <Compile Include="Source\Engine\RawGL\Program.cs" />
     <Compile Include="Source\Engine\RawGL\Shader.cs" />
@@ -89,7 +96,18 @@
     <Compile Include="Source\_Common\Vec\Vec2\_DefVec2.cs" />
     <Compile Include="Source\_Common\_ExtAction.cs" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <EmbeddedResource Include="Shaders.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Shaders.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\_Vertex.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Color.txt" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
