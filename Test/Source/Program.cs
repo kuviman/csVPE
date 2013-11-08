@@ -7,6 +7,7 @@ class Test : State {
 
 	Camera cam = new Camera(2);
 	Texture tex = new Texture(16, 16);
+	Texture tex2 = new Texture("../Data/Textures/Temp.png");
 
 	public Test() {
 		for (int x = 0; x < tex.Width; x++) {
@@ -31,6 +32,13 @@ class Test : State {
 		Draw.Scale(0.5);
 		Draw.Align(0.5, 0.5);
 		tex.Render();
+		Draw.Load();
+
+		Draw.Save();
+		Draw.Translate(0.5, 0.5);
+		Draw.Scale(0.3);
+		Draw.Align(0.5, 0.5);
+		tex2.Render();
 		Draw.Load();
 
 		Draw.Load();
