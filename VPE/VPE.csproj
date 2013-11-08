@@ -69,6 +69,7 @@
     <Compile Include="Source\Engine\Graphics\Draw\RenderTarget.cs" />
     <Compile Include="Source\Engine\Graphics\Draw\Transform.cs" />
     <Compile Include="Source\Engine\Graphics\Shader\Int.cs" />
+    <Compile Include="Source\Engine\Graphics\Shader\Real.cs" />
     <Compile Include="Source\Engine\Graphics\Shader\Texture.cs" />
     <Compile Include="Source\Engine\Graphics\Shader\Vec2.cs" />
     <Compile Include="Source\Engine\Graphics\Shader\Vec4.cs" />
