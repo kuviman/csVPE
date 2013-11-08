@@ -56,6 +56,7 @@ namespace VitPro.Engine {
 			if (CurrentState != null)
 				CurrentState.Render();
 			Window.SwapBuffers();
+			RawGL.Collect();
 		}
 
 		static void KeyDown(Key key) {
