@@ -40,6 +40,19 @@ namespace VitPro.Engine {
 			Draw.Load();
 		}
 
+		public static void Rect(double x1, double y1, double x2, double y2, Color? color = null) {
+			Draw.Save();
+			if (color.HasValue)
+				Draw.Color(color.Value);
+			Draw.Translate(x1, y1);
+			Draw.Scale(x2 - x1, y2 - y1);
+			Draw.Quad();
+			Draw.Load();
+		}
+		public static void Rect(Vec2 p1, Vec2 p2, Color? color = null) {
+			Rect(p1.X, p1.Y, p2.X, p2.Y, color);
+		}
+
 	}
 
 }
