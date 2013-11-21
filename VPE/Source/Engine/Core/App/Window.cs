@@ -13,6 +13,7 @@ namespace VitPro.Engine {
 			InitEvents();
 
 			Title = "VPE application";
+			Window.VSync = VSyncMode.Off;
 		}
 
 		/// <summary>
