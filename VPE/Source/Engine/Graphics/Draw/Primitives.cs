@@ -53,6 +53,20 @@ namespace VitPro.Engine {
 			Rect(p1.X, p1.Y, p2.X, p2.Y, color);
 		}
 
+		public static void Line(Vec2 p1, Vec2 p2, double width, Color? color = null) {
+			Draw.Save();
+			if (color.HasValue)
+				Draw.Color(color.Value);
+
+			Draw.Translate(p1);
+			Draw.Rotate((p2 - p1).Arg);
+			Draw.Scale((p2 - p1).Length, width);
+			Draw.Align(0, 0.5);
+			Draw.Quad();
+
+			Draw.Load();
+		}
+
 	}
 
 }
