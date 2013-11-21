@@ -75,6 +75,7 @@ class Test : State {
 
 class Program {
 	static void Main(string[] args) {
+		App.Fullscreen = true;
 		App.Run(new Test());
 	}
 }

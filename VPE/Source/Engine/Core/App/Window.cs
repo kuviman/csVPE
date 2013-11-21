@@ -15,6 +15,15 @@ namespace VitPro.Engine {
 			Title = "VPE application";
 		}
 
+		public static bool Fullscreen {
+			get {
+				return Window.WindowState == WindowState.Fullscreen;
+			}
+			set {
+				Window.WindowState = value ? WindowState.Fullscreen : WindowState.Normal;
+			}
+		}
+
 		/// <summary>
 		/// Gets or sets window title.
 		/// </summary>
