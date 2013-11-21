@@ -4,7 +4,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{00C3D8F1-5374-42A2-9D80-354C5DB2765C}</ProjectGuid>
+    <ProjectGuid>{CA4698FE-400A-453D-8958-1FECCB7FB881}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>VitPro.Engine</RootNamespace>
@@ -110,6 +110,7 @@
     <Compile Include="Source\_Common\GMath\_DefGMath.cs" />
     <Compile Include="Source\_Common\GRandom\_DefGRandom.cs" />
     <Compile Include="Source\_Common\GRandom\_ExtRandom.cs" />
+    <Compile Include="Source\_Common\Group\_DefGroup.cs" />
     <Compile Include="Source\_Common\GUtil\_DefGUtil.cs" />
     <Compile Include="Source\_Common\Vec\Vec2i\_DefVec2i.cs" />
     <Compile Include="Source\_Common\Vec\Vec2\Algebra.cs" />
