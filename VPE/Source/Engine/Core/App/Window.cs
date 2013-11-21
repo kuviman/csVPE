@@ -15,6 +15,9 @@ namespace VitPro.Engine {
 			Title = "VPE application";
 		}
 
+		/// <summary>
+		/// Gets or sets whether application is in fullscreen mode.
+		/// </summary>
 		public static bool Fullscreen {
 			get {
 				return Window.WindowState == WindowState.Fullscreen;
