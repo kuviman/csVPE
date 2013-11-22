@@ -88,6 +88,16 @@ namespace VitPro {
             return res;
         }
 
+		/// <summary>
+		/// True mod.
+		/// </summary>
+		public static double Mod(double a, double b) {
+			double res = Math.IEEERemainder(a, b);
+			if (res < 0)
+				res += b;
+			return res;
+		}
+
 	}
 
 }
