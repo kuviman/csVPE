@@ -10,7 +10,8 @@ class Test : State {
 	Texture tex2 = new Texture("../Data/Textures/Temp.png");
 	Texture tmp = new Texture(120, 90);
 
-	SystemFont font = new SystemFont("Times New Roman", 72, FontStyle.Bold | FontStyle.Strikeout);
+	//SystemFont font = new SystemFont("Times New Roman", 72, FontStyle.Bold | FontStyle.Strikeout);
+	Font font = new Font("../Data/font.ttf", 32);
 
 	public Test() {
 		for (int x = 0; x < tex.Width; x++) {
@@ -75,7 +76,7 @@ class Test : State {
 
 class Program {
 	static void Main(string[] args) {
-		App.Fullscreen = true;
+		//App.Fullscreen = true;
 		App.Run(new Test());
 	}
 }

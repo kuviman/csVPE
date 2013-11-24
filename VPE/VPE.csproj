@@ -4,7 +4,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{00C3D8F1-5374-42A2-9D80-354C5DB2765C}</ProjectGuid>
+    <ProjectGuid>{CA4698FE-400A-453D-8958-1FECCB7FB881}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>VitPro.Engine</RootNamespace>
@@ -71,6 +71,7 @@
     <Compile Include="Source\Engine\Graphics\Draw\RenderState.cs" />
     <Compile Include="Source\Engine\Graphics\Draw\RenderTarget.cs" />
     <Compile Include="Source\Engine\Graphics\Draw\Transform.cs" />
+    <Compile Include="Source\Engine\Graphics\Font\Font.cs" />
     <Compile Include="Source\Engine\Graphics\Font\FontStyle.cs" />
     <Compile Include="Source\Engine\Graphics\Font\SystemFont.cs" />
     <Compile Include="Source\Engine\Graphics\Font\_IFont.cs" />
