@@ -52,6 +52,12 @@ namespace VitPro.Engine {
             return bitmap;
         }
 
+		public Texture Copy() {
+			var tex = new Texture(this.Smooth);
+			tex.Set(this.ToBitmap());
+			return tex;
+		}
+
     }
 
 }

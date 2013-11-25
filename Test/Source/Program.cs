@@ -99,15 +99,7 @@ class MyManager : StateManager {
 		base.StateChanged();
 		t = 1;
 		if (tex != null) {
-			if (back == null || back.Width != tex.Width || back.Height != tex.Height)
-				back = new Texture(tex.Width, tex.Height);
-			Draw.BeginTexture(back);
-			Draw.Save();
-			Draw.Scale(2);
-			Draw.Align(0.5, 0.5);
-			tex.Render();
-			Draw.Load();
-			Draw.EndTexture();
+			back = tex.Copy();
 		}
 	}
 
