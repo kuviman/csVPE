@@ -6,6 +6,8 @@ namespace VitPro.Engine {
 
 		bool closed = false;
 
+		public StateManager StateManager { get; internal set; }
+
 		/// <summary>
 		/// Gets whether state has been closed.
 		/// </summary>

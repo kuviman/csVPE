@@ -43,18 +43,20 @@ namespace VitPro.Engine {
 
 		static void Update(double dt) {
 			Time += dt;
-			UpdateStates();
-			if (CurrentState == null || Closed) {
+			if (MainState == null || Closed) {
 				Closed = true;
 				Window.Close();
 			}
-			if (CurrentState != null)
-				CurrentState.Update(dt);
+			if (MainState != null) {
+				MainState.Update(dt);
+				if (MainState.Closed)
+					Kill();
+			}
 		}
 
 		static void Render() {
-			if (CurrentState != null)
-				CurrentState.Render();
+			if (MainState != null)
+				MainState.Render();
 			Window.SwapBuffers();
 			RawGL.Collect();
 		}
@@ -62,28 +64,28 @@ namespace VitPro.Engine {
 		static void KeyDown(Key key) {
 			if (key == Key.F4 && (Key.LAlt.Pressed() || Key.RAlt.Pressed()))
 				Window.Close();
-			if (CurrentState != null)
-				CurrentState.KeyDown(key);
+			if (MainState != null)
+				MainState.KeyDown(key);
 		}
 
 		static void KeyUp(Key key) {
-			if (CurrentState != null)
-				CurrentState.KeyUp(key);
+			if (MainState != null)
+				MainState.KeyUp(key);
 		}
 
 		static void MouseDown(MouseButton button, Vec2 pos) {
-			if (CurrentState != null)
-				CurrentState.MouseDown(button, pos);
+			if (MainState != null)
+				MainState.MouseDown(button, pos);
 		}
 
 		static void MouseUp(MouseButton button, Vec2 pos) {
-			if (CurrentState != null)
-				CurrentState.MouseUp(button, pos);
+			if (MainState != null)
+				MainState.MouseUp(button, pos);
 		}
 
 		static void MouseMove(Vec2 pos) {
-			if (CurrentState != null)
-				CurrentState.MouseMove(pos);
+			if (MainState != null)
+				MainState.MouseMove(pos);
 		}
 
 	}

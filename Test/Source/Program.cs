@@ -13,6 +13,8 @@ class Test : State {
 	//SystemFont font = new SystemFont("Times New Roman", 72, FontStyle.Bold | FontStyle.Strikeout);
 	Font font = new Font("../Data/font.ttf", 32);
 
+	double tm = 0;
+
 	public Test() {
 		for (int x = 0; x < tex.Width; x++) {
 			for (int y = 0; y < tex.Height; y++) {
@@ -20,6 +22,11 @@ class Test : State {
 			}
 		}
 		font.Smooth = false;
+	}
+
+	public override void Update(double dt) {
+		base.Update(dt);
+		tm += dt;
 	}
 
 	public override void Render() {
@@ -34,7 +41,7 @@ class Test : State {
 
 		Draw.Save();
 		Draw.Translate(-0.5, -0.5);
-		Draw.Rotate(App.Time);
+		Draw.Rotate(tm);
 		Draw.Scale(0.5);
 		Draw.Align(0.5, 0.5);
 		tex.Render();
@@ -70,13 +77,24 @@ class Test : State {
 		base.KeyDown(key);
 		if (key == Key.Escape)
 			Close();
+		if (key == Key.Space)
+			StateManager.PushState(new Test());
 	}
 
+}
+
+class MyManager : StateManager {
+	public MyManager(State a) : base(a) {
+	}
+	public override void Render() {
+		base.Render();
+		Draw.Quad();
+	}
 }
 
 class Program {
 	static void Main(string[] args) {
 		//App.Fullscreen = true;
-		App.Run(new Test());
+		App.Run(new MyManager(new Test()));
 	}
 }
