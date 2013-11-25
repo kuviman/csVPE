@@ -33,11 +33,16 @@ namespace VitPro.Engine {
 			}
 		}
 
+		public virtual void StateChanged() { }
+
 		public override void Update(double dt) {
 			base.Update(dt);
+			var prevState = CurrentState;
 			while (stateStack.Count > 0 && stateStack.Peek().Closed)
 				stateStack.Pop();
 			CurrentState = stateStack.Count > 0 ? stateStack.Peek() : null;
+			if (CurrentState != prevState)
+				StateChanged();
 			if (CurrentState != null) {
 				var realState = CurrentState as State;
 				if (realState != null)
