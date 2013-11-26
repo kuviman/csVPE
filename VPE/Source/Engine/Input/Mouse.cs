@@ -28,7 +28,7 @@ namespace VitPro.Engine {
 		/// </summary>
 		public static Vec2 Position {
 			get {
-				return new Vec2(App.Window.Mouse.X, App.Window.Mouse.Y);
+				return FromStandard(new Vec2(App.Window.Mouse.X, App.Window.Mouse.Y));
 			}
 			set {
 				value = ToStandard(value);
