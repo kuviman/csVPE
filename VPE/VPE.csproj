@@ -100,6 +100,9 @@
     <Compile Include="Source\Engine\Input\Keyboard.cs" />
     <Compile Include="Source\Engine\Input\Mouse.cs" />
     <Compile Include="Source\Engine\Input\MouseButton.cs" />
+    <Compile Include="Source\Engine\Sound\Static.cs" />
+    <Compile Include="Source\Engine\Sound\WaveLoader.cs" />
+    <Compile Include="Source\Engine\Sound\_DefSound.cs" />
     <Compile Include="Source\Engine\_ExtIEnumerable.cs" />
     <Compile Include="Source\Engine\_IRenderable.cs" />
     <Compile Include="Source\Engine\_IUpdateable.cs" />
