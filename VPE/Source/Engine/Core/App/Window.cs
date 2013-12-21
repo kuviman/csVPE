@@ -16,6 +16,14 @@ namespace VitPro.Engine {
 			Window.VSync = VSyncMode.Off;
 		}
 
+        public static bool VSync
+        {
+            set
+            {
+                Window.VSync = value ? VSyncMode.On : VSyncMode.Off;
+            }
+        }
+
 		/// <summary>
 		/// Gets or sets whether application is in fullscreen mode.
 		/// </summary>
