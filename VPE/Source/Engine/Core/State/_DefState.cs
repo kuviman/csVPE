@@ -61,6 +61,8 @@ namespace VitPro.Engine {
 		/// <param name="pos">Event position.</param>
 		public virtual void MouseMove(Vec2 pos) { }
 
+        public virtual void MouseWheel(double delta) { }
+
 	}
 
 }

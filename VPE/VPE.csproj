@@ -83,6 +83,7 @@
     <Compile Include="Source\Engine\Graphics\Shader\Vec4.cs" />
     <Compile Include="Source\Engine\Graphics\Shader\_DefShader.cs" />
     <Compile Include="Source\Engine\Graphics\Shader\Uniforms.cs" />
+    <Compile Include="Source\Engine\Graphics\Texture\AnimatedTexture.cs" />
     <Compile Include="Source\Engine\Graphics\Texture\Pixels.cs" />
     <Compile Include="Source\Engine\Graphics\Texture\SaveLoad.cs" />
     <Compile Include="Source\Engine\Graphics\Texture\SubTexture.cs" />

@@ -39,6 +39,7 @@ namespace VitPro.Engine {
 			Window.Mouse.ButtonUp += (o, args) => MouseUp(
 				(MouseButton)args.Button, Mouse.FromStandard(new Vec2(args.X, args.Y)));
 			Window.Mouse.Move += (o, args) => MouseMove(Mouse.FromStandard(new Vec2(args.X, args.Y)));
+            Window.Mouse.WheelChanged += (o, args) => MouseWheel(args.DeltaPrecise);
 		}
 
 		static void Update(double dt) {
@@ -67,6 +68,12 @@ namespace VitPro.Engine {
 			if (MainState != null)
 				MainState.KeyDown(key);
 		}
+
+        static void MouseWheel(double delta)
+        {
+            if (MainState != null)
+                MainState.MouseWheel(delta);
+        }
 
 		static void KeyUp(Key key) {
 			if (MainState != null)

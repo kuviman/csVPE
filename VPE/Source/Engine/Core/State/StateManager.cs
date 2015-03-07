@@ -94,6 +94,12 @@ namespace VitPro.Engine {
 			PushState(startState);
 		}
 
+        public override void MouseWheel(double delta)
+        {
+            if (CurrentState != null)
+                CurrentState.MouseWheel(delta);
+        }
+
 	}
 
 }
