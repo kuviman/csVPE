@@ -5,24 +5,26 @@ namespace VitPro.Engine
 {
     public class AnimatedTexture : IUpdateable, IRenderable
     {
-        private List<Tuple<Texture, double>> Texures = new List<Tuple<Texture, double>>();
+        private List<Tuple<Texture, double>> Textures = new List<Tuple<Texture, double>>();
         private List<Tuple<Texture, double>>.Enumerator CurrentTexture;
         private double CurrentTime = 0;
+        private double Timer = 0, TotalTime = 0;
 
         public AnimatedTexture() { }
 
         public AnimatedTexture(Texture tex)
         {
-            Texures.Add(new Tuple<Texture, double>(tex, 0));
-            CurrentTexture = Texures.GetEnumerator();
+            Textures.Add(new Tuple<Texture, double>(tex, 0));
+            CurrentTexture = Textures.GetEnumerator();
             CurrentTexture.MoveNext();
         }
 
         public AnimatedTexture Add(Texture tex, double time)
         {
-            Texures.Add(new Tuple<Texture, double>(tex, time));
-            CurrentTexture = Texures.GetEnumerator();
+            Textures.Add(new Tuple<Texture, double>(tex, time));
+            CurrentTexture = Textures.GetEnumerator();
             CurrentTexture.MoveNext();
+            TotalTime += time;
             return this;
         }
 
@@ -44,7 +46,8 @@ namespace VitPro.Engine
 
         public void Update(double dt)
         {
-            if (Texures.Count < 2)
+            Timer += dt;
+            if (Textures.Count < 2)
                 return;
             CurrentTime += dt;
             if (CurrentTime > CurrentTexture.Current.Item2)
@@ -53,10 +56,28 @@ namespace VitPro.Engine
                 if (!CurrentTexture.MoveNext())
                 {
                     CurrentTexture.Dispose();
-                    CurrentTexture = Texures.GetEnumerator();
+                    CurrentTexture = Textures.GetEnumerator();
                     CurrentTexture.MoveNext();
                 }
             }
         }
+
+        public double GetTotalTime
+        {
+            get
+            {
+                return TotalTime;
+            }
+        }
+
+        public double GetTime
+        {
+            get
+            {
+                return Timer;
+            }
+        }
+
+        public bool HasLooped { get { return GetTime > GetTotalTime; } }
     }
 }
