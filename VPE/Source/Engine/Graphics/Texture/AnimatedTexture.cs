@@ -79,5 +79,14 @@ namespace VitPro.Engine
         }
 
         public bool HasLooped { get { return GetTime > GetTotalTime; } }
+
+        public AnimatedTexture Reset()
+        {
+            Timer = 0;
+            CurrentTime = 0;
+            CurrentTexture = Textures.GetEnumerator();
+            CurrentTexture.MoveNext();
+            return this;
+        }
     }
 }
