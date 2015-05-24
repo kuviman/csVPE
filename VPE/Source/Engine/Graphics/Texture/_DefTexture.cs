@@ -104,6 +104,7 @@ namespace VitPro.Engine {
             Draw.Scale(2);
             shader.Render();
             Draw.EndTexture();
+            this.tex.Dispose();
             this.tex = tex.tex;
         }
     }
