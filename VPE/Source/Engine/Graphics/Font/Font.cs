@@ -29,6 +29,7 @@ namespace VitPro.Engine {
             Draw.Scale(Measure(text), 1);
             tex.Render();
             Draw.Load();
+            tex.Dispose();
         }
 
         public Texture MakeTexture(string text) {

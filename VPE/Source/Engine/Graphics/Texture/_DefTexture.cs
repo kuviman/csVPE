@@ -9,7 +9,7 @@ namespace VitPro.Engine {
     /// Represents a texture image.
     /// </summary>
     [Serializable]
-    public partial class Texture : ITexture {
+    public partial class Texture : ITexture, IDisposable {
 
         [Serializable]
         struct ColorStruct {
@@ -106,6 +106,11 @@ namespace VitPro.Engine {
             Draw.EndTexture();
             this.tex.Dispose();
             this.tex = tex.tex;
+        }
+
+        public void Dispose()
+        {
+            tex.Dispose();
         }
     }
 
