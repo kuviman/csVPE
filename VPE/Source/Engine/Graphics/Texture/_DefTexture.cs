@@ -94,6 +94,18 @@ namespace VitPro.Engine {
             Render(Vec2.Zero, new Vec2(1, 1));
         }
 
+        public void ApplyShader(Shader shader)
+        {
+            Texture tex = this.Copy();
+            shader.SetTexture("texture", this);
+            Draw.BeginTexture(tex);
+            Draw.Clear(Color.Transparent);
+            Draw.Translate(-1, -1);
+            Draw.Scale(2);
+            shader.Render();
+            Draw.EndTexture();
+            this.tex = tex.tex;
+        }
     }
 
 }

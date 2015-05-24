@@ -3,6 +3,7 @@ using System.Collections.Generic;
 
 namespace VitPro.Engine
 {
+    [Serializable]
     public class AnimatedTexture : IUpdateable, IRenderable
     {
         private List<Tuple<Texture, double>> Textures = new List<Tuple<Texture, double>>();
@@ -26,6 +27,14 @@ namespace VitPro.Engine
             CurrentTexture.MoveNext();
             TotalTime += time;
             return this;
+        }
+
+        public void ApplyShader(Shader s)
+        {
+            foreach (var a in Textures)
+            {
+                a.Item1.ApplyShader(s);
+            }
         }
 
         public void Render()
