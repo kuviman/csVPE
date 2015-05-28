@@ -94,6 +94,17 @@ namespace VitPro.Engine {
             Render(Vec2.Zero, new Vec2(1, 1));
         }
 
+        public void RenderToPosAndSize(Vec2 Pos, Vec2 Size)
+        {
+            Draw.Save();
+            Draw.Translate(Pos);
+            Draw.Scale(Size.X, Size.Y);
+            Draw.Scale(2);
+            Draw.Align(0.5, 0.5);
+            Render();
+            Draw.Load();
+        }
+
         public void ApplyShader(Shader shader)
         {
             Texture tex = this.Copy();
